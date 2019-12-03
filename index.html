@@ -14,13 +14,13 @@
 
         <form id="js-form">
             <input type="text" name="search-term" id="js-search-term" placeholder="Start your search here" required>
-            <select name="search-type">
+            <select name="search-type" id="js-search-term">
                 <option value="ingredient">Ingredient</option>
                 <option value="name">Name</option>
             </select>
             <input type="submit" value="search">
         </form>
-
+        <p id="js-error-message" class="error-message"></p>
         <section id="results" class="hidden">
             <ul id="results-list">
             </ul>
