@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    width:40%;
+  }
+  
+  input, select {
+      margin-right: 5px;
+  }
+  input[type="submit"]:hover {
+    cursor: pointer;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 10px;
+  }
+  
+  li, img {
+    max-width: 500px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  
+  .hidden {
+    display: none;
+  }
