@@ -37,6 +37,26 @@ function displayNameResults(responseJson) {
     
   $('#results').removeClass('hidden');
 }
+// function displayCocktail(responseJson) {
+//     $('#results-list').empty();
+//     $('#results-drink').empty();
+//     for (let i = 0; i < responseJson.drinks.length; i++){   
+//       $('#results-drink').append(
+//         `<h3>${responseJson.drinks[i].strDrink}</h3>
+//             <img src="${responseJson.drinks[i].strDrinkThumb}">
+//             <ul>Ingredients:
+//               <li>${responseJson.drinks[i].strIngredient1}</li>
+//               <li>${responseJson.drinks[i].strIngredient2}</li>
+//               <li>${responseJson.drinks[i].strIngredient3}</li>
+//               <li>${responseJson.drinks[i].strIngredient4}</li>
+//             </ui>
+//             <h3>Instructions:</h3>
+//             <p>${responseJson.drinks[i].strInstructions}</p>`
+//       );}
+    
+//     $('#results-drink').removeClass('hidden');
+  
+//   }
     
 function searchByIngredients(query) {
   const params = {
@@ -53,11 +73,11 @@ function searchByIngredients(query) {
       if (response.ok) {
         return response.json();
       }
-      throw new Error(response.statusText);
+    //   throw new Error(response.statusText);
     })
     .then(responseJson => displayIngredientResults(responseJson))
     .catch(err => {
-      $('#js-error-message').text(`Something went wrong: ${err.message}`);
+      $('#js-error-message').text('There are no results matching. Please try again');
     });
 }
   
@@ -67,8 +87,8 @@ function searchByName(query) {
   const params = {
     key: apiKey,
     s: query,
-      
   };
+
   const queryString = formatQueryParams(params);
   const url = searchNameURL + '?' + queryString;
     
@@ -78,7 +98,7 @@ function searchByName(query) {
       if (response.ok) {
         return response.json();
       }
-      throw new Error(response.statusText);
+    //   throw new Error(response.statusText);
     })
     .then(responseJson => displayNameResults(responseJson))
     .catch(err => {
@@ -86,25 +106,7 @@ function searchByName(query) {
     });
 }
 
-function displayCocktail(responseJson) {
-    $('#results-list').empty();
-  for (let i = 0; i < responseJson.drinks.length; i++){   
-    $('#results-list').append(
-      `<h3>${responseJson.drinks[i].strDrink}</h3>
-          <img src="${responseJson.drinks[i].strDrinkThumb}">
-          <ul>Ingredients:
-            <li>${responseJson.drinks[i].strIngredient1}</li>
-            <li>${responseJson.drinks[i].strIngredient2}</li>
-            <li>${responseJson.drinks[i].strIngredient3}</li>
-            <li>${responseJson.drinks[i].strIngredient4}</li>
-          </ui>
-          <h3>Instructions:</h3>
-          <p>${responseJson.drinks[i].strInstructions}</p>`
-    );}
-  
-  $('#results').removeClass('hidden');
 
-}
 
 function watchForm() {
   $('form').submit(event => {
@@ -115,10 +117,10 @@ function watchForm() {
     const searchType = $('#js-search-type').val();
     
     if (searchType === 'ingredients'){
-    searchByIngredients(searchTerm);
+      searchByIngredients(searchTerm);
     }
     else {
-    searchByName(searchTerm);
+      searchByName(searchTerm);
     }
   });
 }
