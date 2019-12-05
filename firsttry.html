@@ -10,11 +10,14 @@
 <body>
     <div class="container">
         <h1>Cocktail API (cool name coming later)</h1>
-        <h3>Here you can find the perfect cocktail searching by ingredient (e.g. vodka, rum, lemon...) You can also search for a particular drink by its name (e.g. Tom Collins)</h3>
+        <h3>Here you can find the perfect cocktail searching by ingredient (e.g. vodka, lemon, rum...) You can also search for a particular drink by its name (e.g. Tom Collins)</h3>
 
         <form id="js-form">
             <input type="text" name="search-term" id="js-search-term" placeholder="Start your search here" required>
-            
+            <select name="search-type" id="js-search-type">
+                <option value="ingredient">Ingredient</option>
+                <option value="name">Name</option>
+            </select>
             <input type="submit" value="search">
         </form>
         <p id="js-error-message" class="error-message"></p>
