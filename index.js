@@ -13,10 +13,10 @@ function displayResults(responseJson) {
   console.log(responseJson);
   $('#results-list').empty();
   $('#js-error-message').empty();
-  for (let i = 0; i < responseJson.drinks.length; i++){   
+  for (let i = 0; i < responseJson.drinks.length; i++){  
     $('#results-list').append(
       `<div class="thumbs">
-      <h3>${responseJson.drinks[i].strDrink}</h3>
+        <h3>${responseJson.drinks[i].strDrink}</h3>
             <a href="javascript:displayCocktail(responseJson)"><img src="${responseJson.drinks[i].strDrinkThumb}" class="drink-image"></a>
             
             <div class="details" id="${responseJson.drinks[i].idDrink}">
@@ -53,7 +53,7 @@ function displayResults(responseJson) {
 function displayCocktail(responseJson){
   $('#results-list').on('click', '.drink-image', function (event) {
     console.log($(this).parent().siblings()[1]);
-    $(this).parent().siblings().toggle(1000);   
+    $(this).parent().siblings().toggle(600);   
   });
 }
 
