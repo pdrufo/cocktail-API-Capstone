@@ -44,3 +44,12 @@
   .hidden {
     display: none;
   }
+
+  .thumbs {
+    display: block;
+    
+  }
+.js-ul {
+  columns: 2;
+}
+  
