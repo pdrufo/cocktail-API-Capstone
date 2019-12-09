@@ -16,7 +16,7 @@ function displayResults(responseJson) {
     $('#results-list').append(
       `<div class="thumbs">
         <h2>${responseJson.drinks[i].strDrink}</h2>
-        <a href="javascript:displayCocktail(responseJson)"><img src="${responseJson.drinks[i].strDrinkThumb}" class="drink-image"></a>
+        <a href="javascript:displayCocktail()"><img src="${responseJson.drinks[i].strDrinkThumb}" class="drink-image"></a>
         <div class="details" id="${responseJson.drinks[i].idDrink}">
           <h2>${responseJson.drinks[i].strDrink}</h2>
           <ul class="js-ul"><h3>Ingredients:</h3>
