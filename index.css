@@ -7,7 +7,6 @@ h1 {
     font-weight: bolder;
     color:rgb(52, 201, 255);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    
   }
 
 h1 img {
@@ -35,7 +34,6 @@ body {
     background: url(/images/moscow0754.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    /* height: 569px; */
     height: 100vh;
     background-color: black;
   }
@@ -47,7 +45,6 @@ body {
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
-    
   }
 
 input[type="text"] {
@@ -62,8 +59,6 @@ input[type="text"] {
     border-radius: 100px;
     transition: 0.4s;
   }
-  
-  
   
 input[type="submit"] {
     margin-left: 90px;
@@ -97,22 +92,12 @@ li, img {
     max-width: 50%;
   }
   
-  /* .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-   */
-/* .error-message {
-    color: red;
-} */
-  
 .hidden {
     display: none;
   }
 
 .js-ul {
     list-style: initial;
-  
   }
 
 .js-ul li { 
@@ -122,18 +107,13 @@ li, img {
   }
 
 section {
-  margin-left: 25px;
-  
- 
-  
+  margin-left: 25px;  
 }
+
 #results-list {
   margin-top: 200px;
-  
 }
-/* #results-list img {
-  height: auto;
-} */
+
  #js-error-message {
    font-size: 16px;
    color: white;
@@ -161,17 +141,14 @@ section {
  @media screen and (min-width: 321px) {
   #results-list {
     margin-top: 450px;
-    
-  }
-  h1 {
-    
-    font-size: 50px;
-    
   }
 
-h1 img {
+  h1 {
+    font-size: 50px;
+  }
+
+  h1 img {
     height:100px;
-    
   }
 }
 
@@ -179,73 +156,77 @@ h1 img {
   .container {
     width:80%;
   }
+
   #results-list {
     margin-top: 600px;
-    
-  }
-  h1 {
-    
-    font-size: 80px;
-    
   }
 
-h1 img {
+  h1 {
+    font-size: 80px;
+  }
+
+  h1 img {
     height:150px;
-    
   }
+
   input[type="text"] {
-   font-size:16px;
+    font-size:16px;
   }
+
   input[type="submit"] {
     margin-left: 160px;
     padding: 8px 14px 9px !important;
     font-size: 14px !important;
-    
   }
+
   h2 {
     font-size:30px;
   }
+
   h3 {
     font-size: 25px;
   }
+
   li, p, a{
     font-size: 20px;
   }
-
 }
+
 @media screen and (min-width: 1024px) {
   .container {
     width:80%;
   }
+
   #results-list {
     margin-top: 900px;
-    
-  }
-  h1 {
-    
-    font-size: 100px;
-    
   }
 
-h1 img {
+  h1 {
+    font-size: 100px;
+  }
+
+  h1 img {
     height:170px;
-    
   }
+
   input[type="text"] {
-   font-size:20px;
+    font-size:20px;
   }
+
   input[type="submit"] {
     margin-left: 190px;
     padding: 14px 20px 13px !important;
     font-size: 18px !important;
-    
   }
+
   h2 {
     font-size:40px;
   }
+
   h3 {
     font-size: 35px;
   }
+
   li, p, a{
     font-size: 30px;
   }
@@ -257,36 +238,38 @@ h1 img {
  
   #results-list {
     margin-top: 1400px;
-    
-  }
-  h1 {
-    
-    font-size: 125px;
-    
   }
 
-h1 img {
-    height:175px;
-    
+  h1 {
+    font-size: 125px;
   }
+
+  h1 img {
+    height:175px;
+  }
+
   li, img {
     max-width: 60%;
   }
+
   input[type="text"] {
    font-size:20px;
   }
+
   input[type="submit"] {
     margin-left: 190px;
     padding: 14px 20px 13px !important;
     font-size: 18px !important;
-    
   }
+
   h2 {
     font-size:50px;
   }
+
   h3 {
     font-size: 40px;
   }
+
   li, p, a{
     font-size: 35px;
   }

@@ -31,48 +31,36 @@ function displayResults(responseJson) {
             }).join('')
             }
             </ul>
-          
             <h3>Instructions:</h3>
             <p>${responseJson.drinks[i].strInstructions}</p>
             <h3>Serving Glass:</h3>
             <p>${responseJson.drinks[i].strGlass}</p>
-            </div>
+        </div>
       </div>
-      
       `
-           
-           
     );}
   $('#results-list').append(
     '<footer><a href="#top">Click here to go to top of page</a></footer>'   
   );
   $('#results').removeClass('hidden');
   $('.details').hide();
-
   $('#button').click(function() {
     $('html, body').animate({
       scrollTop: $('#results').offset().top
     }, 1000);
   });
-
-  
-
-  
 }
 
-function displayCocktail(responseJson){
+function displayCocktail(){
   $('#results-list').on('click', '.drink-image', function () {
     console.log($(this).parent().siblings()[1]);
-    $(this).parent().siblings().toggle(600); 
-    
+    $(this).parent().siblings().toggle(800); 
   });
-  $('#results-list').on('submit', '.drink-image', function () {
-    event.preventDefault();
-    console.log($(this).parent().siblings()[1]);
-    $(this).parent().siblings().toggle(600); 
-    
-  });
-
+  // $('#results-list').on('submit', '.drink-image', function () {
+  //   event.preventDefault();
+  //   console.log($(this).parent().siblings()[1]);
+  //   $(this).parent().siblings().toggle(600); 
+  // });
 }
 
 function searchByName(query) {
@@ -84,7 +72,6 @@ function searchByName(query) {
   const queryString = formatQueryParams(params);
   const url = searchNameURL + '?' + queryString;
     
-  console.log(url);
   fetch(url)
     .then(response => {
       if (response.ok) {
@@ -98,16 +85,12 @@ function searchByName(query) {
     });
 }
 
-
-
 function watchForm() {
   $('form').submit(event => {
     event.preventDefault();
     $('.results').empty();
-    
     const searchTerm = $('#js-search-term').val();
     searchByName(searchTerm);
-    
   });
 }
   
